@@ -3,7 +3,7 @@ from functions.voice_vox import textToVoice, playWav
 
 if __name__ == "__main__":
     print("ずんだもんと会話したい内容を入力するのだ")
-    playWav("wav_dir/start.wav")
+    playWav("system_wav/start.wav")
     while True:
         try:
             print("あなた：")
@@ -14,4 +14,4 @@ if __name__ == "__main__":
             textToVoice(reply_chat_gpt)
         except:
             print("エラーなのだ。もう一度内容を入力してほしいのだ")
-            playWav("wav_dir/error.wav")
+            playWav("system_wav/error.wav")

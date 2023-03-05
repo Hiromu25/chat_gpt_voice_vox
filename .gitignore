@@ -1,4 +1,4 @@
 .env
-wav_dir
+wav_dir/
 __pycache__
 .DS_Store

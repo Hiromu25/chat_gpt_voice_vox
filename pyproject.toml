@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "chat-gpt-voice-vox"
+version = "0.1.0"
+description = ""
+authors = ["2525 <hi5ro20mu1999@gmail.com>"]
+readme = "README.md"
+packages = [{include = "chat_gpt_voice_vox"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+openai = "^0.27.0"
+simpleaudio = "^1.0.4"
+python-dotenv = "^1.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

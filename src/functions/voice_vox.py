@@ -4,10 +4,10 @@ import requests
 import time
 
 def textToVoice(text):
+    # ファイル名に用いるunix時間取得
     ut = time.time()
 
     # 音声合成処理
-
     # audio_query (音声合成用のクエリを作成するAPI)
     res1 = requests.post("http://localhost:50021/audio_query",
                         params={"text": text, "speaker": 1})
@@ -20,10 +20,7 @@ def textToVoice(text):
     with open(audio_file, mode="wb") as f:
         f.write(res2.content)
 
-    # wavファイル再生
-    playWav(audio_file)
-
-    return
+    return audio_file
 
 def playWav(file):
     with open(file,"rb") as f:

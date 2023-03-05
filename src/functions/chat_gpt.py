@@ -1,11 +1,12 @@
 import openai
 from dotenv import load_dotenv
 import os
-load_dotenv()
 
+load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def callChatGPT(text):
+    # ChatGPTに対して与えた設定に沿った回答を行うように指定
     completion = openai.ChatCompletion.create(
         model="gpt-3.5-turbo", 
         messages=[
@@ -30,4 +31,5 @@ def callChatGPT(text):
             {"role": "user", "content": text}
             ]
         )
+    # ChatGPTからの回答をreturn
     return completion["choices"][0]["message"]["content"]
